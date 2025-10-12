@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Our Team - The Counseling Center of Keyport</title>
+    <meta name="description" content="Join our growing team of mental health professionals at The Counseling Center of Keyport. Competitive compensation, flexible scheduling, and professional support.">
+    <link rel="icon" type="image/png" href="images/logo.png">
+    <link rel="apple-touch-icon" href="images/logo.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#6B8CAE',
+                        'secondary': '#5A8AAE',
+                        'deep-blue': '#2D4A63',
+                        'accent': '#E6834A',
+                        'soft-gray': '#E2E8F0',
+                        'pure-calm': '#F8FAFC'
+                    },
+                    fontFamily: {
+                        'montserrat': ['Montserrat', 'sans-serif'],
+                        'source': ['Source Sans Pro', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .hero-gradient {
+            background: linear-gradient(135deg, #6B8CAE 0%, #5A8AAE 50%, #2D4A63 100%);
+        }
+        
+        .benefit-card {
+            transition: all 0.3s ease;
+        }
+        
+        .benefit-card:hover {
+            transform: translateY(-8px);
+        }
+        
+        .fade-in {
+            animation: fadeIn 0.8s ease-in;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .stagger-1 { animation-delay: 0.1s; }
+        .stagger-2 { animation-delay: 0.2s; }
+        .stagger-3 { animation-delay: 0.3s; }
+    </style>
+</head>
+<body class="bg-pure-calm font-source text-deep-blue leading-relaxed">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <a href="index.html" class="flex items-center space-x-3 hover:opacity-80 transition-opacity">
+                    <img src="images/logo.png" alt="Counseling Center Logo" class="h-10 w-10 sm:h-12 sm:w-12 object-contain">
+                    <div class="text-primary font-montserrat font-semibold text-base sm:text-lg lg:text-xl">
+                        The Counseling Center of Keyport
+                    </div>
+                </a>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-6">
+                    <a href="index.html#services" class="text-deep-blue hover:text-primary transition-colors duration-300 font-medium">Services</a>
+                    <a href="join-us.html" class="text-deep-blue hover:text-primary transition-colors duration-300 font-medium">Join Us</a>
+                    <a href="index.html#contact" class="text-deep-blue hover:text-primary transition-colors duration-300 font-medium">Contact</a>
+                </div>
+                
+                <!-- Mobile Hamburger Button -->
+                <button id="mobile-menu-button" class="md:hidden flex items-center px-3 py-2 border rounded text-primary border-primary hover:text-secondary hover:border-secondary transition-colors">
+                    <svg class="fill-current h-5 w-5" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <title>Menu</title>
+                        <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/>
+                    </svg>
+                </button>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="md:hidden hidden pb-4">
+                <div class="px-2 pt-2 pb-3 space-y-1 bg-pure-calm rounded-lg mt-2">
+                    <a href="index.html#services" class="mobile-menu-link block px-3 py-2 text-deep-blue hover:text-primary hover:bg-white rounded-md transition-all duration-300 font-medium">Services</a>
+                    <a href="join-us.html" class="mobile-menu-link block px-3 py-2 text-deep-blue hover:text-primary hover:bg-white rounded-md transition-all duration-300 font-medium">Join Us</a>
+                    <a href="index.html#contact" class="mobile-menu-link block px-3 py-2 text-deep-blue hover:text-primary hover:bg-white rounded-md transition-all duration-300 font-medium">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient text-white py-16 sm:py-24">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="font-montserrat font-light text-3xl sm:text-4xl lg:text-5xl mb-6 fade-in">
+                Join Our Team
+            </h1>
+            <p class="text-lg sm:text-xl mb-8 font-light fade-in stagger-1 max-w-3xl mx-auto">
+                The Counseling Center of Keyport is growing, and we're looking for dedicated mental health professionals to join our collaborative practice.
+            </p>
+        </div>
+    </section>
+
+    <!-- Introduction Section -->
+    <section class="py-16 sm:py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="space-y-6 text-lg leading-relaxed fade-in">
+                <p>
+                    Led by <a href="https://www.psychologytoday.com/us/therapists/molly-hahn-keyport-nj/163072" target="_blank" rel="noopener noreferrer" class="text-primary hover:text-accent font-semibold underline">Molly Hahn</a>, an experienced and skilled mentor, our center provides a supportive environment where clinicians can thrive professionally while delivering exceptional care to our community.
+                </p>
+                
+                <p>
+                    Whether you're an established professional or a recent graduate beginning your career, we offer the resources, flexibility, and collegial atmosphere you need to do your best work. Our beautifully renovated office space in central Keyport provides a welcoming setting for individual, couples, and group therapy, with easy access for both clinicians and clients.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="py-16 sm:py-20 bg-pure-calm">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="font-montserrat text-3xl sm:text-4xl font-medium text-deep-blue mb-6 fade-in">
+                    Why Join Us?
+                </h2>
+                <div class="w-20 h-1 bg-accent mx-auto"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="benefit-card bg-white rounded-xl p-8 text-center shadow-lg fade-in">
+                    <div class="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-montserrat text-xl font-semibold text-deep-blue mb-4">Competitive Pay</h3>
+                    <p class="text-gray-600 leading-relaxed">Compensation that reflects your expertise and professional worth</p>
+                </div>
+                
+                <div class="benefit-card bg-white rounded-xl p-8 text-center shadow-lg fade-in stagger-1">
+                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-montserrat text-xl font-semibold text-deep-blue mb-4">Hybrid Flexibility</h3>
+                    <p class="text-gray-600 leading-relaxed">Balance in-person and telehealth sessions to fit your lifestyle</p>
+                </div>
+                
+                <div class="benefit-card bg-white rounded-xl p-8 text-center shadow-lg fade-in stagger-2">
+                    <div class="w-16 h-16 bg-secondary rounded-full flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-montserrat text-xl font-semibold text-deep-blue mb-4">Expert Collaboration</h3>
+                    <p class="text-gray-600 leading-relaxed">Work alongside seasoned clinicians with ongoing consultation</p>
+                </div>
+                
+                <div class="benefit-card bg-white rounded-xl p-8 text-center shadow-lg fade-in stagger-3">
+                    <div class="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-montserrat text-xl font-semibold text-deep-blue mb-4">Modern Space</h3>
+                    <p class="text-gray-600 leading-relaxed">Renovated office in central Keyport with easy access</p>
+                </div>
+                
+                <div class="benefit-card bg-white rounded-xl p-8 text-center shadow-lg fade-in">
+                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-montserrat text-xl font-semibold text-deep-blue mb-4">Free Supervision</h3>
+                    <p class="text-gray-600 leading-relaxed">No-cost clinical supervision for associates working toward licensure</p>
+                </div>
+                
+                <div class="benefit-card bg-white rounded-xl p-8 text-center shadow-lg fade-in stagger-1">
+                    <div class="w-16 h-16 bg-secondary rounded-full flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-montserrat text-xl font-semibold text-deep-blue mb-4">Admin Support</h3>
+                    <p class="text-gray-600 leading-relaxed">Focus on clinical work—we handle billing and admin tasks</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="py-16 sm:py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="bg-soft-gray rounded-xl p-8 sm:p-12 fade-in">
+                <h2 class="font-montserrat text-2xl sm:text-3xl font-medium text-deep-blue mb-6">
+                    We're Currently Seeking
+                </h2>
+                <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+                    <strong>LPC, LSW, LMSW,</strong> and <strong>associate-level clinicians</strong> who are passionate about providing quality care across all therapeutic modalities.
+                </p>
+                
+                <div class="mb-8">
+                    <h3 class="font-montserrat text-xl font-semibold text-deep-blue mb-4">
+                        Ready to grow professionally and make a real difference?
+                    </h3>
+                </div>
+                
+                <a href="contact.html" class="inline-block bg-accent hover:bg-orange-600 text-white px-10 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:shadow-2xl">
+                    Contact Us Today
+                </a>
+                
+                <p class="mt-6 text-gray-600">
+                    Or call Molly directly at <a href="tel:+17322171283" class="text-primary hover:text-accent font-semibold">(732) 217-1283</a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Back to Home -->
+    <section class="py-12 bg-pure-calm">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <a href="index.html" class="inline-flex items-center text-primary hover:text-secondary transition-colors font-medium">
+                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+                </svg>
+                Back to Home
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-deep-blue text-white py-12">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="font-montserrat text-xl font-semibold mb-4">The Counseling Center of Keyport</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        A safe space to heal, grow, and find peace. Professional therapy services for individuals, couples, families, and teens.
+                    </p>
+                </div>
+                
+                <div>
+                    <h3 class="font-montserrat text-xl font-semibold mb-4">Services</h3>
+                    <ul class="space-y-2 text-gray-300">
+                        <li>Individual Therapy</li>
+                        <li>Couples Counseling</li>
+                        <li>Family Therapy</li>
+                        <li>Adolescent Counseling</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="font-montserrat text-xl font-semibold mb-4">Contact</h3>
+                    <div class="space-y-2 text-gray-300">
+                        <p><strong>Molly Hahn, LCSW</strong></p>
+                        <p>Licensed Clinical Social Worker</p>
+                        <p>328 Maple Avenue</p>
+                        <p>Keyport, NJ 07735</p>
+                        <p><a href="tel:+17322171283" class="text-gray-300 hover:text-white transition-colors">+1 (732) 217-1283</a></p>
+                        <p class="pt-2">
+                            <a href="https://www.psychologytoday.com/us/therapists/molly-hahn-keyport-nj/163072" target="_blank" rel="noopener noreferrer" class="text-accent hover:text-white transition-colors underline">
+                                View Full Profile →
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-600 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 The Counseling Center of Keyport. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Hamburger menu functionality
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileMenuLinks = document.querySelectorAll('.mobile-menu-link');
+
+        // Toggle mobile menu
+        mobileMenuButton.addEventListener('click', function() {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking on a link
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const isClickInsideNav = mobileMenuButton.contains(event.target) || mobileMenu.contains(event.target);
+            if (!isClickInsideNav && !mobileMenu.classList.contains('hidden')) {
+                mobileMenu.classList.add('hidden');
+            }
+        });
+
+        // Add intersection observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all fade-in elements
+        document.querySelectorAll('.fade-in').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
