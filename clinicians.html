@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-EK6HYZM6QT"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-EK6HYZM6QT');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meet Our Clinicians - The Counseling Center of Keyport</title>
+    <meta name="description" content="Meet the licensed clinicians at The Counseling Center of Keyport, led by Molly Hahn, LCSW.">
+    <link rel="icon" type="image/png" href="images/logo.png">
+    <link rel="apple-touch-icon" href="images/logo.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#6B8CAE',
+                        'secondary': '#5A8AAE',
+                        'deep-blue': '#2D4A63',
+                        'accent': '#E6834A',
+                        'soft-gray': '#E2E8F0',
+                        'pure-calm': '#F8FAFC'
+                    },
+                    fontFamily: {
+                        'montserrat': ['Montserrat', 'sans-serif'],
+                        'source': ['Source Sans Pro', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .hero-gradient {
+            background: linear-gradient(135deg, #6B8CAE 0%, #5A8AAE 50%, #2D4A63 100%);
+        }
+
+        .clinician-card {
+            transition: all 0.3s ease;
+        }
+
+        .clinician-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .cta-button {
+            background: linear-gradient(45deg, #E6834A, #D4743D);
+            transition: all 0.3s ease;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(230, 131, 74, 0.3);
+        }
+
+        .fade-in {
+            animation: fadeIn 0.8s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .stagger-1 { animation-delay: 0.1s; }
+        .stagger-2 { animation-delay: 0.2s; }
+        .stagger-3 { animation-delay: 0.3s; }
+    </style>
+</head>
+<body class="bg-pure-calm font-source text-deep-blue leading-relaxed">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <a href="index.html" class="flex items-center space-x-3 hover:opacity-80 transition-opacity">
+                    <img src="images/logo.png" alt="Counseling Center Logo" class="h-10 w-10 sm:h-12 sm:w-12 object-contain">
+                    <div>
+                        <div class="text-primary font-montserrat font-semibold text-base sm:text-lg lg:text-xl">
+                            The Counseling Center of Keyport
+                        </div>
+                        <div class="text-deep-blue/70 text-xs sm:text-sm italic font-light leading-tight">
+                            In a crisis? You are not alone, call 988 or text 988
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-6">
+                    <a href="index.html#services" class="text-deep-blue hover:text-primary transition-colors duration-300 font-medium">Services</a>
+                    <a href="index.html#rates" class="text-deep-blue hover:text-primary transition-colors duration-300 font-medium">Rates &amp; Insurance</a>
+                    <a href="clinicians.html" class="text-deep-blue hover:text-primary transition-colors duration-300 font-medium">Clinicians</a>
+                    <a href="join-us.html" class="text-deep-blue hover:text-primary transition-colors duration-300 font-medium">Join Us</a>
+                    <a href="index.html#contact" class="text-deep-blue hover:text-primary transition-colors duration-300 font-medium">Contact</a>
+                </div>
+
+                <!-- Mobile Hamburger Button -->
+                <button id="mobile-menu-button" class="md:hidden flex items-center px-3 py-2 border rounded text-primary border-primary hover:text-secondary hover:border-secondary transition-colors">
+                    <svg class="fill-current h-5 w-5" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <title>Menu</title>
+                        <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="md:hidden hidden pb-4">
+                <div class="px-2 pt-2 pb-3 space-y-1 bg-pure-calm rounded-lg mt-2">
+                    <a href="index.html#services" class="mobile-menu-link block px-3 py-2 text-deep-blue hover:text-primary hover:bg-white rounded-md transition-all duration-300 font-medium">Services</a>
+                    <a href="index.html#rates" class="mobile-menu-link block px-3 py-2 text-deep-blue hover:text-primary hover:bg-white rounded-md transition-all duration-300 font-medium">Rates &amp; Insurance</a>
+                    <a href="clinicians.html" class="mobile-menu-link block px-3 py-2 text-deep-blue hover:text-primary hover:bg-white rounded-md transition-all duration-300 font-medium">Clinicians</a>
+                    <a href="join-us.html" class="mobile-menu-link block px-3 py-2 text-deep-blue hover:text-primary hover:bg-white rounded-md transition-all duration-300 font-medium">Join Us</a>
+                    <a href="index.html#contact" class="mobile-menu-link block px-3 py-2 text-deep-blue hover:text-primary hover:bg-white rounded-md transition-all duration-300 font-medium">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient text-white py-16 sm:py-24">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="font-montserrat font-light text-3xl sm:text-4xl lg:text-5xl mb-6 fade-in">
+                Meet Our Clinicians
+            </h1>
+            <p class="text-lg sm:text-xl mb-8 font-light fade-in stagger-1 max-w-2xl mx-auto">
+                Experienced, compassionate therapists who take the time to understand you.
+            </p>
+        </div>
+    </section>
+
+    <!-- Clinicians Grid -->
+    <section class="py-16 sm:py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!--
+                CLINICIAN CARDS
+                To add a clinician, copy one <div class="clinician-card ...> ... </div>
+                block below and edit: photo (images/...), name, credentials, title,
+                one-paragraph bio, and the profile link (or remove the link if none).
+            -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Molly Hahn -->
+                <div class="clinician-card bg-white rounded-xl p-8 text-center shadow-lg hover:shadow-2xl fade-in">
+                    <img src="images/Molly-head-shot.jpg" alt="Molly Hahn, LCSW" class="w-36 h-36 rounded-full mx-auto object-cover border-4 border-primary shadow-lg mb-6">
+                    <h3 class="font-montserrat text-2xl font-semibold text-deep-blue mb-1">Molly Hahn, LCSW</h3>
+                    <p class="text-gray-500 mb-1">Licensed Clinical Social Worker</p>
+                    <p class="text-primary font-semibold text-sm mb-5">Founder &amp; Clinical Director</p>
+                    <p class="text-gray-600 leading-relaxed mb-6">
+                        Molly leads the practice and works with individuals, couples, families, and teens, drawing on evidence-based approaches in a warm, supportive setting.
+                    </p>
+                    <a href="https://www.psychologytoday.com/us/therapists/molly-hahn-keyport-nj/163072" target="_blank" rel="noopener noreferrer" class="inline-block bg-soft-gray hover:bg-primary text-deep-blue hover:text-white px-5 py-2.5 rounded-lg font-medium transition-all duration-300 text-sm">
+                        View Profile on Psychology Today &rarr;
+                    </a>
+                </div>
+
+                <!-- NEXT CLINICIAN: copy the block above and paste here -->
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-16 sm:py-20 bg-pure-calm">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center fade-in">
+            <h2 class="font-montserrat text-2xl sm:text-3xl font-medium text-deep-blue mb-6">
+                Ready to get started?
+            </h2>
+            <a href="contact.html" class="cta-button text-white px-10 py-4 rounded-lg font-semibold text-lg inline-block">
+                Schedule Your First Appointment
+            </a>
+            <p class="mt-6 text-gray-600">
+                Or call us at <a href="tel:+17322171283" class="text-primary hover:text-accent font-semibold">(732) 217-1283</a>
+            </p>
+        </div>
+    </section>
+
+    <!-- Back to Home -->
+    <section class="py-12 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <a href="index.html" class="inline-flex items-center text-primary hover:text-secondary transition-colors font-medium">
+                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+                </svg>
+                Back to Home
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-deep-blue text-white py-8">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="mb-4">
+                <h3 class="font-montserrat text-xl font-semibold mb-2">The Counseling Center of Keyport</h3>
+                <p class="text-gray-300">A safe space to heal, grow, and find peace</p>
+            </div>
+            <div class="border-t border-gray-600 pt-4 text-gray-400">
+                <p>&copy; 2024 The Counseling Center of Keyport. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileMenuLinks = document.querySelectorAll('.mobile-menu-link');
+
+        mobileMenuButton.addEventListener('click', function() {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        document.addEventListener('click', function(event) {
+            const isClickInsideNav = mobileMenuButton.contains(event.target) || mobileMenu.contains(event.target);
+            if (!isClickInsideNav && !mobileMenu.classList.contains('hidden')) {
+                mobileMenu.classList.add('hidden');
+            }
+        });
+
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
