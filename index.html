@@ -93,6 +93,7 @@
                 <!-- Desktop Menu -->
                 <div class="hidden md:flex space-x-6">
                     <a href="#services" class="text-deep-blue hover:text-primary transition-colors duration-300 font-medium">Services</a>
+                    <a href="#rates" class="text-deep-blue hover:text-primary transition-colors duration-300 font-medium">Rates &amp; Insurance</a>
                     <a href="join-us.html" class="text-deep-blue hover:text-primary transition-colors duration-300 font-medium">Join Us</a>
                     <a href="#contact" class="text-deep-blue hover:text-primary transition-colors duration-300 font-medium">Contact</a>
                 </div>
@@ -110,6 +111,7 @@
             <div id="mobile-menu" class="md:hidden hidden pb-4">
                 <div class="px-2 pt-2 pb-3 space-y-1 bg-pure-calm rounded-lg mt-2">
                     <a href="#services" class="mobile-menu-link block px-3 py-2 text-deep-blue hover:text-primary hover:bg-white rounded-md transition-all duration-300 font-medium">Services</a>
+                    <a href="#rates" class="mobile-menu-link block px-3 py-2 text-deep-blue hover:text-primary hover:bg-white rounded-md transition-all duration-300 font-medium">Rates &amp; Insurance</a>
                     <a href="join-us.html" class="mobile-menu-link block px-3 py-2 text-deep-blue hover:text-primary hover:bg-white rounded-md transition-all duration-300 font-medium">Join Us</a>
                     <a href="#contact" class="mobile-menu-link block px-3 py-2 text-deep-blue hover:text-primary hover:bg-white rounded-md transition-all duration-300 font-medium">Contact</a>
                 </div>
@@ -214,8 +216,80 @@
         </div>
     </section>
 
+    <!-- Rates and Insurance Section -->
+    <section id="rates" class="py-16 sm:py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="font-montserrat text-3xl sm:text-4xl font-medium text-deep-blue mb-6 fade-in">
+                    Rates and Insurance
+                </h2>
+                <div class="w-20 h-1 bg-accent mx-auto"></div>
+            </div>
+
+            <!-- Rates -->
+            <div class="max-w-3xl mx-auto text-center mb-14 fade-in stagger-1">
+                <h3 class="font-montserrat text-xl font-semibold text-deep-blue mb-3">Rates</h3>
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Session rates are set with care to keep quality counseling accessible. Please <a href="tel:+17322171283" class="text-primary hover:text-accent font-semibold">call us</a> to discuss.
+                </p>
+            </div>
+
+            <!-- Insurance -->
+            <div class="text-center fade-in stagger-2">
+                <h3 class="font-montserrat text-xl font-semibold text-deep-blue mb-3">Insurance</h3>
+                <p class="text-lg text-gray-700 leading-relaxed mb-8">
+                    We participate with these insurance companies:
+                </p>
+
+                <!--
+                    Insurance logo grid: up to 10 tiles.
+                    To add a logo, drop the image in images/insurance/ and replace the
+                    <span> inside a tile with:
+                        <img src="images/insurance/NAME.png" alt="Company Name" class="max-h-12 max-w-full object-contain">
+                    To show a hidden tile, remove the "hidden" class.
+                -->
+                <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 max-w-5xl mx-auto">
+                    <div class="h-24 bg-pure-calm border border-soft-gray rounded-lg flex items-center justify-center px-4">
+                        <span class="font-montserrat font-semibold text-deep-blue">Aetna</span>
+                    </div>
+                    <div class="h-24 bg-pure-calm border border-soft-gray rounded-lg flex items-center justify-center px-4">
+                        <span class="font-montserrat font-semibold text-deep-blue text-center">Blue Cross<br>Blue Shield</span>
+                    </div>
+                    <div class="hidden h-24 bg-pure-calm border border-soft-gray rounded-lg flex items-center justify-center px-4">
+                        <span class="font-montserrat font-semibold text-deep-blue">Logo 3</span>
+                    </div>
+                    <div class="hidden h-24 bg-pure-calm border border-soft-gray rounded-lg flex items-center justify-center px-4">
+                        <span class="font-montserrat font-semibold text-deep-blue">Logo 4</span>
+                    </div>
+                    <div class="hidden h-24 bg-pure-calm border border-soft-gray rounded-lg flex items-center justify-center px-4">
+                        <span class="font-montserrat font-semibold text-deep-blue">Logo 5</span>
+                    </div>
+                    <div class="hidden h-24 bg-pure-calm border border-soft-gray rounded-lg flex items-center justify-center px-4">
+                        <span class="font-montserrat font-semibold text-deep-blue">Logo 6</span>
+                    </div>
+                    <div class="hidden h-24 bg-pure-calm border border-soft-gray rounded-lg flex items-center justify-center px-4">
+                        <span class="font-montserrat font-semibold text-deep-blue">Logo 7</span>
+                    </div>
+                    <div class="hidden h-24 bg-pure-calm border border-soft-gray rounded-lg flex items-center justify-center px-4">
+                        <span class="font-montserrat font-semibold text-deep-blue">Logo 8</span>
+                    </div>
+                    <div class="hidden h-24 bg-pure-calm border border-soft-gray rounded-lg flex items-center justify-center px-4">
+                        <span class="font-montserrat font-semibold text-deep-blue">Logo 9</span>
+                    </div>
+                    <div class="hidden h-24 bg-pure-calm border border-soft-gray rounded-lg flex items-center justify-center px-4">
+                        <span class="font-montserrat font-semibold text-deep-blue">Logo 10</span>
+                    </div>
+                </div>
+
+                <p class="text-sm text-gray-500 mt-8">
+                    Not sure if your plan is covered? Call us and we'll help you check.
+                </p>
+            </div>
+        </div>
+    </section>
+
     <!-- Contact Section -->
-    <section id="contact" class="py-16 sm:py-20 bg-white">
+    <section id="contact" class="py-16 sm:py-20 bg-pure-calm">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 class="font-montserrat text-3xl sm:text-4xl font-medium text-deep-blue mb-6 fade-in">
                 Ready to Begin Your Journey?
