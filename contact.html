@@ -233,6 +233,7 @@
                     </div>
 
                     <form id="schedule-form" class="space-y-5" novalidate>
+                        <input type="checkbox" name="botcheck" class="hidden" style="display:none" tabindex="-1" autocomplete="off">
                         <div class="grid sm:grid-cols-2 gap-4">
                             <div>
                                 <label for="f-name" class="form-label">Name <span class="text-accent">*</span></label>
@@ -398,55 +399,78 @@
 
     <script>
         // ---- Email form ----
-        // Interim approach: the form opens the visitor's own email app with the
-        // message pre-filled, addressed to SCHEDULING_EMAIL. No third party sees
-        // the data. Swap for a form service later if a server-side send is wanted.
-        const SCHEDULING_EMAIL = 'mollyhahn22@gmail.com';
+        // Submissions are sent server-side through Web3Forms (web3forms.com),
+        // which emails them to the address registered with this access key.
+        // To change the destination address, create a new key at web3forms.com
+        // for the new address and paste it here.
+        const WEB3FORMS_ACCESS_KEY = 'd7d1da12-9c5a-41fb-8b38-20b3e7b53510';
 
         const form = document.getElementById('schedule-form');
         const status = document.getElementById('form-status');
+        const submitBtn = form.querySelector('button[type="submit"]');
 
-        form.addEventListener('submit', function (e) {
+        function setStatus(msg, kind) {
+            status.textContent = msg;
+            status.className = kind === 'error'
+                ? 'text-sm text-accent font-semibold'
+                : kind === 'ok'
+                    ? 'text-sm text-green-700 font-semibold'
+                    : 'text-sm text-gray-500';
+        }
+
+        form.addEventListener('submit', async function (e) {
             e.preventDefault();
-            status.textContent = '';
-            status.className = 'text-sm text-gray-500';
 
             const data = new FormData(form);
             const name = (data.get('name') || '').trim();
             const phone = (data.get('phone') || '').trim();
 
             if (!name || !phone) {
-                status.textContent = 'Please add your name and phone number so we can reach you.';
-                status.className = 'text-sm text-accent font-semibold';
+                setStatus('Please add your name and phone number so we can reach you.', 'error');
                 return;
             }
 
-            if (!SCHEDULING_EMAIL) {
-                status.textContent = 'Email scheduling is almost ready. Please call us for now.';
-                status.className = 'text-sm text-accent font-semibold';
-                return;
-            }
+            // Honeypot: real visitors never see or fill this field.
+            if (data.get('botcheck')) { return; }
 
             const categories = data.getAll('category').join(', ') || 'Not specified';
-            const lines = [
-                'Appointment request from the website',
-                '',
-                'Name: ' + name,
-                'Phone: ' + phone,
-                'Insurance: ' + ((data.get('insurance') || '').trim() || 'Not specified'),
-                'Preferred visit method: ' + (data.get('method') || 'Not specified'),
-                'Counseling for: ' + categories,
-                'Best days & times: ' + ((data.get('times') || '').trim() || 'Not specified'),
-                '',
-                'Reason for visit:',
-                (data.get('reason') || '').trim() || 'Not specified'
-            ];
+            const payload = {
+                access_key: WEB3FORMS_ACCESS_KEY,
+                subject: 'Appointment request from ' + name,
+                from_name: 'Counseling Center of Keyport website',
+                'Name': name,
+                'Phone': phone,
+                'Insurance': (data.get('insurance') || '').trim() || 'Not specified',
+                'Preferred visit method': data.get('method') || 'Not specified',
+                'Counseling for': categories,
+                'Best days and times': (data.get('times') || '').trim() || 'Not specified',
+                'Reason for visit': (data.get('reason') || '').trim() || 'Not specified'
+            };
 
-            const subject = encodeURIComponent('Appointment request from ' + name);
-            const body = encodeURIComponent(lines.join('\n'));
-            window.location.href = 'mailto:' + SCHEDULING_EMAIL + '?subject=' + subject + '&body=' + body;
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Sending...';
+            setStatus('');
 
-            status.textContent = 'Your email app should open with the message ready to send.';
+            try {
+                const res = await fetch('https://api.web3forms.com/submit', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+                const result = await res.json();
+
+                if (res.ok && result.success) {
+                    form.reset();
+                    submitBtn.textContent = 'Message Sent';
+                    setStatus("Thank you, " + name.split(' ')[0] + ". We've received your message and will be in touch soon.", 'ok');
+                } else {
+                    throw new Error(result.message || 'Send failed');
+                }
+            } catch (err) {
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Send Message';
+                setStatus("Sorry, something went wrong sending your message. Please call us at (732) 217-1283.", 'error');
+            }
         });
 
         // ---- Hamburger menu ----
