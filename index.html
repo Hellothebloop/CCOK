@@ -196,7 +196,7 @@
                 </div>
                 
                 <div class="service-card bg-white rounded-xl p-8 text-center shadow-lg transition-all duration-300 hover:shadow-2xl fade-in stagger-2">
-                    <div class="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-6">
+                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
                         <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
                         </svg>
@@ -231,8 +231,11 @@
             <!-- Rates -->
             <div class="max-w-3xl mx-auto text-center mb-14 fade-in stagger-1">
                 <h3 class="font-montserrat text-xl font-semibold text-deep-blue mb-3">Rates</h3>
+                <p class="text-lg text-gray-700 leading-relaxed mb-3">
+                    Individual sessions are 50 minutes and are <span class="font-semibold text-deep-blue">$200</span>.
+                </p>
                 <p class="text-lg text-gray-700 leading-relaxed">
-                    Session rates are set with care to keep quality counseling accessible. Please <a href="tel:+17322171283" class="text-primary hover:text-accent font-semibold">call us</a> to discuss.
+                    Couples and family sessions run 60 to 90 minutes, depending on what you need, and range from <span class="font-semibold text-deep-blue">$300 to $375</span>.
                 </p>
             </div>
 
@@ -243,44 +246,44 @@
                     We participate with these insurance companies:
                 </p>
 
-                <!--
-                    Insurance logo grid: up to 10 tiles.
-                    To add a logo, drop the image in images/insurance/ and replace the
-                    <span> inside a tile with:
-                        <img src="images/insurance/NAME.png" alt="Company Name" class="max-h-12 max-w-full object-contain">
-                    To show a hidden tile, remove the "hidden" class.
-                -->
-                <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
-                    <div class="h-24 bg-pure-calm border border-soft-gray rounded-lg flex items-center justify-center px-4">
-                        <span class="font-montserrat font-semibold text-deep-blue text-center">Aetna</span>
-                    </div>
-                    <div class="h-24 bg-pure-calm border border-soft-gray rounded-lg flex items-center justify-center px-4">
-                        <span class="font-montserrat font-semibold text-deep-blue text-center">Cigna</span>
-                    </div>
-                    <div class="h-24 bg-pure-calm border border-soft-gray rounded-lg flex items-center justify-center px-4">
-                        <span class="font-montserrat font-semibold text-deep-blue text-center">NJ Blue Cross<br>Blue Shield</span>
-                    </div>
-                    <div class="h-24 bg-pure-calm border border-soft-gray rounded-lg flex items-center justify-center px-4">
-                        <span class="font-montserrat font-semibold text-deep-blue text-center">NY Blue Cross<br>Blue Shield</span>
-                    </div>
-                    <div class="h-24 bg-pure-calm border border-soft-gray rounded-lg flex items-center justify-center px-4">
-                        <span class="font-montserrat font-semibold text-deep-blue text-center">Horizon NJ Health</span>
-                    </div>
-                    <div class="h-24 bg-pure-calm border border-soft-gray rounded-lg flex items-center justify-center px-4">
-                        <span class="font-montserrat font-semibold text-deep-blue text-center">United Healthcare</span>
-                    </div>
-                    <div class="h-24 bg-pure-calm border border-soft-gray rounded-lg flex items-center justify-center px-4">
-                        <span class="font-montserrat font-semibold text-deep-blue text-center">Medicare</span>
-                    </div>
-                    <div class="h-24 bg-pure-calm border border-soft-gray rounded-lg flex items-center justify-center px-4">
-                        <span class="font-montserrat font-semibold text-deep-blue text-center">MVP</span>
-                    </div>
-                    <div class="hidden h-24 bg-pure-calm border border-soft-gray rounded-lg flex items-center justify-center px-4">
-                        <span class="font-montserrat font-semibold text-deep-blue text-center">Logo 9</span>
-                    </div>
-                    <div class="hidden h-24 bg-pure-calm border border-soft-gray rounded-lg flex items-center justify-center px-4">
-                        <span class="font-montserrat font-semibold text-deep-blue text-center">Logo 10</span>
-                    </div>
+                <!-- Accepted insurance: two columns of four. To add a plan, add an <li> to either list. -->
+                <div class="grid sm:grid-cols-2 gap-x-16 gap-y-3 max-w-2xl mx-auto text-left">
+                    <ul class="space-y-3 text-lg text-gray-700">
+                        <li class="flex items-start">
+                            <span class="text-accent mr-3 mt-1">&bull;</span>
+                            <span>Aetna</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-accent mr-3 mt-1">&bull;</span>
+                            <span>Cigna</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-accent mr-3 mt-1">&bull;</span>
+                            <span>NJ Blue Cross Blue Shield</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-accent mr-3 mt-1">&bull;</span>
+                            <span>NY Blue Cross Blue Shield</span>
+                        </li>
+                    </ul>
+                    <ul class="space-y-3 text-lg text-gray-700">
+                        <li class="flex items-start">
+                            <span class="text-accent mr-3 mt-1">&bull;</span>
+                            <span>Horizon NJ Health</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-accent mr-3 mt-1">&bull;</span>
+                            <span>United Healthcare</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-accent mr-3 mt-1">&bull;</span>
+                            <span>Medicare</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-accent mr-3 mt-1">&bull;</span>
+                            <span>MVP</span>
+                        </li>
+                    </ul>
                 </div>
 
                 <p class="text-sm text-gray-500 mt-8">
